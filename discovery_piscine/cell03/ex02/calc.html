@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calculatrice</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+	<div id="calculatrice">
+			<input type="text" id="cell1" name="cell1" placeholder="Entre le 1er nombre">
+			<select id="select">
+				<option id="add">+</option>
+				<option id="sous">-</option>
+				<option id="mult">*</option>
+				<option id="div">/</option>
+				<option id="mod">%</option>
+			</select>
+			<input type="text" id="cell2" name="cell2" placeholder="Entre le 2eme nombre"></td>
+			<input type="submit" id="btn" value="Try me!"/>
+	</div>
+	</body>
+	<script>
+		function calculer()
+		{
+			var valeur1,valeur2,resultat;
+	
+			valeur1 = document.getElementById("cell1").value;
+			valeur2 = document.getElementById("cell2").value;
+
+			if(document.getElementById("add").selected)
+			{
+				if(valeur1 < 0 || valeur2 < 0)
+					resultat = "Error :(";
+				else
+					resultat = parseInt(valeur1) + parseInt(valeur2);
+			}
+			else if(document.getElementById("sous").selected)
+			{
+				if(valeur1 < 0 || valeur2 < 0)
+					resultat = "Error :(";
+				else
+					resultat = parseInt(valeur1) - parseInt(valeur2);
+			}
+			else if(document.getElementById("mult").selected)
+			{
+				if(valeur1 < 0 || valeur2 < 0)
+					resultat = "Error :(";
+				else
+					resultat = parseInt(valeur1) * parseInt(valeur2);
+			}
+			else if(document.getElementById("div").selected)
+			{
+				if (valeur2 == 0)
+					resultat = "It's over 9000!";
+				else if(valeur1 < 0 || valeur2 < 0)
+					resultat = "Error :(";
+				else
+					resultat = parseInt(valeur1) / parseInt(valeur2);
+			} 
+			else if (document.getElementById("mod").selected)
+			{
+				if (valeur2 == 0)
+					resultat = "It's over 9000!";
+				else if(valeur1 < 0 || valeur2 < 0)
+					resultat = "Error :("
+				else
+					resultat = parseInt(valeur1) * parseInt(valeur2);
+			}
+			alert(resultat);
+			console.log(resultat);
+		}
+
+		var btn = document.getElementById("btn");
+		btn.addEventListener("click", function(){
+			calculer();
+		})
+
+		function pop()
+		{
+				alert("Please, use me...");
+		}
+		setInterval(pop, 30000);
+	</script>
+	
+</html>

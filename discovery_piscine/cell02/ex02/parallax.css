@@ -1,0 +1,35 @@
+.parallax {
+	height: 100vh;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.parallax1 {
+  background-image: 
+url("https://blog.vacancesweb.be/wp-content/uploads/2021/09/shutterstock_1062018698.jpg");
+}
+
+.parallax2 {
+  background-image: 
+url("https://www.sciencesetavenir.fr/assets/img/2017/09/14/cover-r4x3w1000-59ba79b28b44f-naruto.jpg");
+}
+
+.texte_centrer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.texte {
+	position:relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); 
+}
+
+body {
+	background-color: black;
+}
